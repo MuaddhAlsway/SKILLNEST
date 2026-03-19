@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: row;
   gap: 30px;
-  padding: 20px 200px;
+  padding: 20px clamp(20px, 10%, 350px); /* responsive padding */
   align-items: center;
   margin: 30px auto;
 }
@@ -23,7 +23,7 @@
   flex: 1;
 }
 
-/* Hover effect for cards */
+/* Hover effect */
 .sectionItem:hover, .sectioncardItem:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
@@ -80,180 +80,67 @@
   flex-direction: row-reverse;
 }
 
-/* ================= DESKTOP (1025px - 1280px) ================= */
+/* ================= BREAKPOINTS ================= */
+
+/* Desktop 1025px - 1280px */
 @media (max-width: 1280px) {
-  .categoriesDiv {
-    padding: 20px 100px;
-    gap: 25px;
-  }
-
-  .imgRight img {
-    max-width: 250px;
-  }
-
-  .title h4 {
-    font-size: 1.3rem;
-  }
-
-  .title p {
-    font-size: 0.95rem;
-  }
+  .categoriesDiv { padding: 20px clamp(20px, 8%, 100px); gap: 25px; }
+  .imgRight img { max-width: 250px; }
+  .title h4 { font-size: 1.3rem; }
+  .title p { font-size: 0.95rem; }
 }
 
-/* ================= LAPTOP (821px - 1024px) ================= */
+/* Laptop 821px - 1024px */
 @media (max-width: 1024px) {
-  .categoriesDiv {
-    padding: 20px 60px;
-    gap: 20px;
-  }
-
-  .sectionItem, .sectioncardItem {
-    padding: 18px;
-  }
-
-  .imgRight img {
-    max-width: 200px;
-  }
-
-  .title h4 {
-    font-size: 1.2rem;
-  }
-
-  .title p {
-    font-size: 0.9rem;
-  }
-
-  .title button {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
+  .categoriesDiv { padding: 20px clamp(20px, 6%, 60px); gap: 20px; }
+  .sectionItem, .sectioncardItem { padding: 18px; }
+  .imgRight img { max-width: 200px; }
+  .title h4 { font-size: 1.2rem; }
+  .title p { font-size: 0.9rem; }
+  .title button { padding: 8px 16px; font-size: 0.9rem; }
 }
 
-/* ================= TABLET (481px - 820px) ================= */
+/* Tablet / Mobile 480px - 820px */
 @media (max-width: 820px) {
-  .categoriesDiv {
-    flex-direction: column;
-    padding: 20px 40px;
-    gap: 25px;
-  }
-
-  .sectionItem, .sectioncardItem {
-    width: 100%;
-    padding: 25px;
-  }
-
-  .imgRight img {
-    max-width: 220px;
-  }
-
-  .title h4 {
-    font-size: 1.3rem;
-  }
-
-  .title p {
-    font-size: 0.95rem;
-  }
+  .categoriesDiv { flex-direction: column; padding: 20px clamp(20px, 5%, 40px); gap: 25px; }
+  .sectionItem, .sectioncardItem { width: 100%; padding: 25px; }
+  .imgRight img { max-width: 220px; }
+  .title h4 { font-size: 1.3rem; }
+  .title p { font-size: 0.95rem; }
 }
 
-/* ================= SMALL TABLET (481px - 600px) ================= */
+/* Small Tablet 481px - 600px */
 @media (max-width: 600px) {
-  .categoriesDiv {
-    padding: 15px 30px;
-    gap: 20px;
-  }
-
+  .categoriesDiv { padding: 15px 30px; gap: 20px; }
   .sectionItem, .sectioncardItem {
     flex-direction: column;
     text-align: center;
     gap: 20px;
     padding: 20px;
   }
-
-  .sectioncardItem {
-    flex-direction: column;
-  }
-
-  .sectionItem .title, .sectioncardItem .title {
-    max-width: 100%;
-  }
-
-  .imgRight {
-    justify-content: center;
-  }
-
-  .imgRight img {
-    max-width: 80%;
-  }
-
-  .title h4 {
-    font-size: 1.2rem;
-  }
-
-  .title p {
-    font-size: 0.9rem;
-  }
+  .sectionItem .title, .sectioncardItem .title { max-width: 100%; }
+  .imgRight { justify-content: center; }
+  .imgRight img { max-width: 80%; }
+  .title h4 { font-size: 1.2rem; }
+  .title p { font-size: 0.9rem; }
 }
 
-/* ================= MOBILE (up to 480px) ================= */
+/* Mobile up to 480px */
 @media (max-width: 480px) {
-  .categoriesDiv {
-    padding: 15px 20px;
-    gap: 15px;
-  }
-
-  .sectionItem, .sectioncardItem {
-    padding: 15px;
-    border-radius: 12px;
-    gap: 15px;
-  }
-
-  .title h4 {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-  }
-
-  .title p {
-    font-size: 0.85rem;
-    margin-bottom: 12px;
-  }
-
-  .title button {
-    padding: 8px 14px;
-    font-size: 0.85rem;
-    border-radius: 6px;
-  }
-
-  .imgRight img {
-    max-width: 90%;
-  }
+  .categoriesDiv { padding: 15px 20px; gap: 15px; }
+  .sectionItem, .sectioncardItem { padding: 15px; border-radius: 12px; gap: 15px; }
+  .title h4 { font-size: 1.1rem; margin-bottom: 8px; }
+  .title p { font-size: 0.85rem; margin-bottom: 12px; }
+  .title button { padding: 8px 14px; font-size: 0.85rem; border-radius: 6px; }
+  .imgRight img { max-width: 90%; }
 }
 
-/* ================= EXTRA SMALL MOBILE (up to 360px) ================= */
+/* Extra small mobile up to 360px */
 @media (max-width: 360px) {
-  .categoriesDiv {
-    padding: 10px 15px;
-    gap: 12px;
-  }
-
-  .sectionItem, .sectioncardItem {
-    padding: 12px;
-    gap: 12px;
-  }
-
-  .title h4 {
-    font-size: 1rem;
-  }
-
-  .title p {
-    font-size: 0.8rem;
-  }
-
-  .title button {
-    padding: 7px 12px;
-    font-size: 0.8rem;
-  }
-
-  .imgRight img {
-    max-width: 100%;
-  }
+  .categoriesDiv { padding: 10px 15px; gap: 12px; }
+  .sectionItem, .sectioncardItem { padding: 12px; gap: 12px; }
+  .title h4 { font-size: 1rem; }
+  .title p { font-size: 0.8rem; }
+  .title button { padding: 7px 12px; font-size: 0.8rem; }
+  .imgRight img { max-width: 100%; }
 }

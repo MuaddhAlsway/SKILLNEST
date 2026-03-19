@@ -1,0 +1,65 @@
+/* ================= SECTION ================= */
+.categoriesFilterSection {
+  padding: 20px clamp(20px, 10%, 350px); /* flexible padding: 20px min, 350px max */}
+
+/* ================= HEADER ================= */
+.categoriesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.categoriesHeader h4 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #233d4d;
+}
+
+.categoriesHeader p {
+  color: #ff5b04;
+  font-weight: 500;
+}
+
+/* ================= GRID ================= */
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+/* ================= CARD ================= */
+.categoryCard {
+  background: #f8fafc;
+  border: 1px solid rgba(255, 91, 4, 0.4);
+  color: #233d4d;
+  padding: 14px 18px;
+  border-radius: 999px; /* pill shape */
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* ================= HOVER ================= */
+.categoryCard:hover {
+  background: #ff5b04;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 91, 4, 0.3);
+}
+
+/* ================= ACTIVE (OPTIONAL) ================= */
+.categoryCard.active {
+  background: #233d4d;
+  color: #fff;
+  border-color: #233d4d;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 576px) {
+  .categoriesFilterSection {
+    padding: 32px 20px;
+  }
+}

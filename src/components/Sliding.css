@@ -1,0 +1,231 @@
+/* ================= SECTION ================= */
+.slidingSection {
+  padding: 20px clamp(20px, 10%, 350px); /* flexible padding: 20px min, 350px max */
+  overflow: hidden;
+}
+
+.PaddingContainer {
+  padding: 0px 40px;
+}
+
+/* ================= TITLE ================= */
+.slidingSection .title {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.slidingSection h4 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #233d4d;
+}
+
+.slidingSection p {
+  color: #FF5B04;
+}
+
+/* ================= SLIDER ================= */
+.slider {
+  overflow: hidden;
+  position: relative;
+}
+
+/* ================= CONTAINER ================= */
+.containerCard {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+/* Pause animation on hover */
+.slider:hover .containerCard {
+  animation-play-state: paused;
+}
+
+/* ================= CARD ================= */
+.cardItem {
+  min-width: 260px;
+  background: #16232A;
+  color: #e4eef0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.cardItem:hover {
+  transform: translateY(-8px);
+}
+
+/* ================= ICON ================= */
+.icon {
+  font-size: 36px;
+  color: #FF5B04;
+  margin-bottom: 12px;
+}
+
+/* ================= TEXT ================= */
+.catTitle {
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.courses {
+  display: block;
+  font-size: 14px;
+  color: #FF5B04;
+  margin: 6px 0;
+}
+
+.cardItem p {
+  font-size: 14px;
+  color: #e4eef0;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ================================================= */
+/* ================= RESPONSIVE ==================== */
+/* ================================================= */
+
+/* --------- Small laptops / large tablets --------- */
+@media (max-width: 1024px) {
+  .slidingSection {
+    padding: 40px;
+  }
+
+  .PaddingContainer {
+    padding: 0 24px;
+  }
+
+  .containerCard {
+    gap: 20px;
+  }
+
+  .cardItem {
+    min-width: 240px;
+  }
+}
+
+/* --------- iPad Air / 820px --------- */
+@media (max-width: 820px) {
+  .slidingSection {
+    padding: 36px 24px;
+  }
+
+  .PaddingContainer {
+    padding: 0 20px;
+  }
+
+  .slidingSection h4 {
+    font-size: 23px;
+  }
+
+  .containerCard {
+    gap: 18px;
+    animation-duration: 32s;
+  }
+
+  .cardItem {
+    min-width: 230px;
+    padding: 20px;
+  }
+
+  .icon {
+    font-size: 30px;
+  }
+
+  .catTitle {
+    font-size: 16px;
+  }
+
+  .courses,
+  .cardItem p {
+    font-size: 13.5px;
+  }
+}
+
+/* --------- Tablets --------- */
+@media (max-width: 768px) {
+  .slidingSection {
+    padding: 32px 20px;
+  }
+
+  .slidingSection h4 {
+    font-size: 22px;
+  }
+
+  .containerCard {
+    animation-duration: 30s;
+  }
+
+  .cardItem {
+    min-width: 220px;
+    padding: 20px;
+  }
+
+  .icon {
+    font-size: 32px;
+  }
+
+  .catTitle {
+    font-size: 16px;
+  }
+}
+
+/* --------- Mobile --------- */
+@media (max-width: 576px) {
+  .slidingSection {
+    padding: 24px 16px;
+  }
+
+  .PaddingContainer {
+    padding: 0 12px;
+  }
+
+  .slidingSection .title {
+    margin-bottom: 20px;
+  }
+
+  .slidingSection h4 {
+    font-size: 20px;
+  }
+
+  .slidingSection p {
+    font-size: 13px;
+  }
+
+  .containerCard {
+    gap: 16px;
+    animation-duration: 35s;
+  }
+
+  .cardItem {
+    min-width: 200px;
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .icon {
+    font-size: 28px;
+  }
+
+  .catTitle {
+    font-size: 15px;
+  }
+
+  .courses,
+  .cardItem p {
+    font-size: 13px;
+  }
+}

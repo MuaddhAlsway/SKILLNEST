@@ -1,0 +1,94 @@
+.categoriesPlusSection {
+  padding: 20px clamp(20px, 10%, 350px); /* flexible padding: 20px min, 350px max */  background: #0f1b24;
+  overflow: hidden;
+}
+
+.titlePlus {
+  margin-bottom: 32px;
+}
+
+.titlePlus h4 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.titlePlus p {
+  color: #ff5b04;
+  font-size: 14px;
+}
+
+.sliderPlus {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.containerCategories {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+}
+
+.cardCategories {
+  min-width: 260px;
+  background: linear-gradient(180deg, #16232a, #111b22);
+  border-radius: 18px;
+  padding: 26px;
+  color: #e4eef0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.cardCategories:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+}
+
+.cardCategories .icon {
+  font-size: 40px;
+  color: #ff5b04;
+  margin-bottom: 14px;
+}
+
+.cardCategories .catTitle {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.cardCategories .courses {
+  display: inline-block;
+  font-size: 13px;
+  color: #ff5b04;
+  margin-bottom: 10px;
+}
+
+.cardCategories p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .categoriesPlusSection { padding: 40px 32px; }
+  .cardCategories { min-width: 240px; }
+}
+
+@media (max-width: 768px) {
+  .categoriesPlusSection { padding: 32px 20px; }
+  .titlePlus h4 { font-size: 24px; }
+  .cardCategories { min-width: 220px; padding: 22px; }
+  .cardCategories .icon { font-size: 34px; }
+}
+
+@media (max-width: 576px) {
+  .categoriesPlusSection { padding: 24px 16px; }
+  .cardCategories { min-width: 200px; padding: 18px; border-radius: 14px; }
+  .cardCategories .catTitle { font-size: 16px; }
+  .cardCategories p { font-size: 13px; }
+}

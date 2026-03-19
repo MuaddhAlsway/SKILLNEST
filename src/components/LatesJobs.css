@@ -1,0 +1,153 @@
+/* ================= SECTION ================= */
+.latestJobsSection {
+  padding: 20px clamp(20px, 10%, 350px); /* flexible padding: 20px min, 350px max */
+    background: #0f1b24;
+}
+
+/* ================= HEADER ================= */
+.latestJobsHeader {
+  margin-bottom: 32px;
+}
+
+.latestJobsHeader h4 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #e4eef0;
+}
+
+.latestJobsHeader p {
+  color: #FF5B04;
+}
+
+/* ================= CONTAINER ================= */
+.latestJobsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* ================= CARD ================= */
+.latestJobCard {
+  background: #16232a;
+  border-radius: 16px;
+  padding: 24px;
+  color: #e4eef0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.latestJobCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= LOGO ================= */
+.latestJobLogo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.latestJobLogo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.latestJobTitle {
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+}
+
+.latestJobCompany {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ================= FILTER ================= */
+.latestJobFilter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.latestJobLocation {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #FF5B04;
+}
+
+.latestJobSalary {
+  background: rgba(59, 130, 246, 0.15);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* ================= TYPE ================= */
+.latestJobType {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.latestJobType.full {
+  background: #1d4ed8;
+}
+
+.latestJobType.part {
+  background: #16a34a;
+}
+
+/* ================= FOOTER ================= */
+.latestJobFooter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .latestJobsSection {
+    padding: 50px 30px;
+  }
+
+  .latestJobsContainer {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .latestJobsSection {
+    padding: 32px 20px;
+  }
+
+  .latestJobTitle {
+    font-size: 16px;
+  }
+
+  .latestJobsContainer {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .latestJobsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .latestJobFilter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

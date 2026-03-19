@@ -1,109 +1,157 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Saira', sans-serif;
 }
 
-.navbar{
-    display:flex;
-    flex-direction: row;
+/* ------------------ NAVBAR ------------------ */
+.navbar {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px;
+    padding: 20px clamp(20px, 10%, 350px); /* flexible padding: 20px min, 350px max */
     background-color: #fe712f;
-    
+    position: relative;
+    z-index: 100;
 }
 
-/* Navbar links */
+/* Navbar Links */
 .navbarContainer {
-  display: flex;
-  flex-direction: row; /* horizontal */
-  gap: 30px;
-  list-style: none;
+    display: flex;
+    gap: 30px;
+    list-style: none;
 }
-    .navbarContainer li a{
-        text-decoration: none;
-        color: #233d4d;
-        font-size: 16px;
-        font-weight: 700;
-        
-        transition: color 0.3s ease;
-    }
-/* Auth buttons */
-.authButtons button{
+.navbarContainer li a {
+    text-decoration: none;
+    color: #233d4d;
+    font-size: 16px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+.navbarContainer li a:hover {
+    color: #ffffff;
+}
+
+/* Auth Buttons */
+.authButtons button {
     padding: 8px 16px;
     border: 1px solid #233d4d;
     background: transparent;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    transition: all 0.3s ease;
 }
-
-.authButtons .signupBtn{
+.authButtons .signupBtn {
     background-color: #233d4d;
     color: white;
     margin-left: 10px;
 }
-.authButtons .signupBtn a{
+.authButtons button a {
     text-decoration: none;
+    color: inherit;
+}
+.authButtons .signupBtn a {
     color: white;
 }
-.authButtons button a{
-    text-decoration: none;
-    color: #233d4d;
-}
 
-/* Menu icon (hidden by default) */
+/* Menu Icon */
 .menuIcons {
     display: none;
     font-size: 28px;
     cursor: pointer;
+    color: #233d4d;
 }
 
-/* ------------------- TABLET / SMALL LAPTOP ------------------- */
+/* ------------------- MEDIA QUERIES ------------------- */
 
-/* <= 1024px */
-@media (max-width: 1024px){
+/* Tablet / Small Laptop <= 1024px */
+@media (max-width: 1024px) {
     .navbar {
-        padding: 15px 60px;
+        padding: 15px clamp(20px, 5%, 60px); /* smaller horizontal padding */
     }
-
     .navbarContainer {
         gap: 20px;
     }
-
     .authButtons button {
         padding: 6px 12px;
         font-size: 15px;
     }
 }
 
-/* <= 820px */
-@media (max-width: 820px){
+/* Medium devices <= 820px */
+@media (max-width: 820px) {
     .navbar {
-        padding: 15px 40px;
+        padding: 15px clamp(20px, 5%, 40px);
     }
-
     .navbarContainer {
         gap: 15px;
         font-size: 14px;
     }
-
     .authButtons button {
         padding: 5px 10px;
         font-size: 14px;
     }
 }
-
-/* MOBILE (<= 768px) */
-@media (max-width: 768px){
+/* Medium devices <= 820px */
+@media (max-width: 820px) {
     .navbar {
-        padding: 15px 20px;
+        padding: 15px 20px; /* small fixed padding like mobile */
     }
-    .navbarContainer li{
+
+    /* Hide desktop menu & auth buttons */
+    .navbarContainer,
+    .authButtons {
+        display: none;
+    }
+
+    /* Show mobile menu icon */
+    .menuIcons {
+        display: block;
+    }
+
+    /* Mobile menu dropdown (shown when active) */
+    .navbarContainer.mobile-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* below navbar */
+        left: 0;
+        width: 100%;
+        background-color: #f0f0f0;
+        padding: 20px 0;
+        gap: 15px;
+        z-index: 10;
+    }
+
+    .authButtons.mobile-active {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+    /* Mobile links padding */
+    .navbarContainer li {
+        padding: 10px 20px;
+    }
+
+    /* Make buttons full width on mobile/tablet */
+    .authButtons button {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+    }
+}
+/* Mobile <= 768px */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px; /* mobile: fixed small padding */
+    }
+    .navbarContainer li {
         padding: 10px 20px;
     }
 
@@ -118,12 +166,12 @@
         display: block;
     }
 
-    /* Mobile menu dropdown (hidden by default) */
+    /* Mobile menu dropdown */
     .navbarContainer.mobile-active {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 70px; /* below navbar */
+        top: 70px;
         left: 0;
         width: 100%;
         background-color: #f0f0f0;

@@ -1,0 +1,125 @@
+/* ================= BANNER SECTION ================= */
+.BannerPadding {
+  padding: 50px 60px;
+  background-color: #16232a;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* ================= BANNER CONTAINER ================= */
+.BannerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+  position: relative;
+}
+
+/* ================= CONTENT ================= */
+.Content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Content h4 {
+  font-size: 25px;
+  max-width: 380px;
+  color: #e4eef0;
+  margin: 0;
+}
+
+.Content span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #e4eef0;
+}
+
+/* ================= BUTTON ================= */
+.bannerButton {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.bannerButton button {
+  padding: 10px 40px;
+  background-color:#FF5B04;
+  border: none;
+  color: #16232a;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bannerButton button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ================= HAND-DRAWN ARROW ================= */
+.scribbleArrow {
+  width: 120px;       /* size of arrow */
+  height: auto;
+  transform: rotate(-15deg); /* tilt for hand-drawn look */
+  margin-top: -10px;  /* adjust vertical spacing to point naturally */
+  margin-left: -60px; /* adjust horizontal spacing */
+  z-index: 1;
+  position: relative;
+  animation: bounceArrow 2s infinite;
+}
+
+@keyframes bounceArrow {
+  0%, 100% { transform: translateY(0) rotate(-15deg); }
+  50% { transform: translateY(-6px) rotate(-15deg); }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .BannerPadding {
+    padding: 40px 60px;
+  }
+  .Content h4 {
+    font-size: 22px;
+  }
+  .bannerButton button {
+    font-size: 18px;
+    padding: 8px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .BannerContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .scribbleArrow {
+    margin-left: 0;
+    margin-top: -20px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .BannerPadding {
+    padding: 30px 20px;
+  }
+  .Content h4 {
+    font-size: 20px;
+  }
+  .bannerButton button {
+    font-size: 16px;
+    padding: 8px 24px;
+  }
+}

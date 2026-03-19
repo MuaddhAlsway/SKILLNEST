@@ -14,8 +14,8 @@ const Navbar = () => {
             <li><a href="/">Home</a></li>
             <li><a href="/about">AboutUs</a></li>
             <li><a href="/services">Services</a></li>
-            <li><a href="/blog">Categories</a></li>
-            <li><a href="/rents">Course</a></li>
+            <li><a href="/categories">Categories</a></li>
+            <li><a href="/course">Course</a></li>
             <li><a href="/contact">ContactUS</a></li>
         </ul>
         <div className="authButtons">
