@@ -1,6 +1,6 @@
 import './Effer.css'
-import img from '../assets/img.jpg'
-import img1 from '../assets/img1.jpg'
+import img from '../assets/Img.jpg'
+import img1 from '../assets/Img1.jpg'
 
 const Effer = () => {
   return (
