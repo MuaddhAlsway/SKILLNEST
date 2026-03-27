@@ -13,7 +13,7 @@ import ML1 from "../assets/ML1.webp"; // Machine Learning
 import ML2 from "../assets/ML2.webp"; // AI
 import ML3 from "../assets/ML3.webp"; // Artificial Intelligence
 import ML4 from "../assets/ML4.png"; // Deep Learning
-import ML5 from "../assets/ML5.webp"; // Python AI
+import ML5 from "../assets/mL5.webp"; // Python AI
 import ML6 from "../assets/ML6.webp"; // Natural Language Processing
 import ML7 from "../assets/ML7.webp"; // AI Project Cycle
 import ML8 from "../assets/ML8.webp"; // Reinforcement Learning
