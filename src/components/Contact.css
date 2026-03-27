@@ -1,0 +1,81 @@
+.contactPage {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* 🔝 Header */
+.contactHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contactHeader h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.contactHeader p {
+  color: #666;
+}
+
+/* 📦 Main Container */
+.contactContainer {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* 📍 Left Info */
+.contactInfo {
+  flex: 1;
+}
+
+.contactInfo h2 {
+  margin-bottom: 20px;
+}
+
+.contactInfo p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* 📝 Form */
+.contactForm {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactForm input,
+.contactForm textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.contactForm textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.contactForm button {
+  padding: 12px;
+  background: #fb8500;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contactForm button:hover {
+  background: #e76f00;
+}

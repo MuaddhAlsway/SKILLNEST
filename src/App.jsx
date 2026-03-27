@@ -1,27 +1,24 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home";
 import Categories from "./pages/Categories";
-import AdminPanel from "../src/Admin/AdminPanel"; // new import
-
-
 import CourseCategoryDetails from "./components/CourseCategoryDetails";
 import ScrollToTop from "./components/ScrollToTop";
 import CoursePageDetails from "./components/CoursePageDetails";
-import HRPanel from "../hr/HR.jsx"; // new import
-import Login from "./students/Login.jsx"; // new import
+import About from "./pages/About.jsx";
+
+import Contactus from "./pages/Contactus.jsx"
 const App = () => {
   return (
     <Router>
       <ScrollToTop />
       <Routes>
-      
-  <Route path="/hr" element={<HRPanel />} />
-  <Route path="/login" element={<Login />} />
         <Route path="/" element={<Home />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/category/:categoryName" element={<CourseCategoryDetails />} />
         <Route path="/course/:id" element={<CoursePageDetails />} />
-              <Route path="/admin" element={<AdminPanel />} /> {/* new admin route */}
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contactus />} />
 
       </Routes>
     </Router>

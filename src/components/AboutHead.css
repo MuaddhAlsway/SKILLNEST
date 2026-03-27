@@ -1,0 +1,236 @@
+.aboutHeader {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 🎥 Background Video */
+.aboutHeader video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+   height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* 🌑 Dark overlay for readability */
+.aboutHeader::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* 📦 Text Container */
+.containerText {
+  position: relative;
+  max-width: 700px;
+  padding: 20px;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 80px;
+}
+
+/* 🏷 Small Title */
+.titleSpan {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fb8500;
+  margin-bottom: 10px;
+}
+
+/* 🧠 Main Title */
+.containerText h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* 📄 Paragraph */
+.paragraphAbout {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+/* 🔘 Buttons */
+.containerText button {
+  padding: 12px 25px;
+  margin-right: 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+/* First Button */
+.containerText button:first-of-type {
+  background: #fb8500;
+  color: black;
+}
+
+.containerText button:first-of-type:hover {
+  background: #fb8500;
+}
+
+/* Second Button */
+.containerText button:last-of-type {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.containerText button:last-of-type:hover {
+  background: white;
+  color: black;
+}
+.overlayCard {
+  position: absolute;
+  bottom: -10%; /* ✅ key fix */
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 70%;
+  height: 20%;
+
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 40px;
+  z-index: 40;
+}
+
+/* 🧠 Text */
+.overlayText h1 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: #111;
+}
+
+.overlayText span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* 🔘 Button */
+.overlayCard button {
+  padding: 12px 25px;
+  background: #ffb703;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.overlayCard button:hover {
+  background: #fb8500;
+}
+
+@media (max-width: 992px) {
+  .containerText {
+    margin-left: 40px;
+    max-width: 500px;
+  }
+
+  .containerText h1 {
+    font-size: 36px;
+  }
+
+  .paragraphAbout {
+    font-size: 14px;
+  }
+
+  .overlayCard {
+    width: 85%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .overlayText h1 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .containerText {
+    margin: 0 auto;
+    text-align: center;
+    top: 45%;
+    transform: translateY(-45%);
+  }
+
+  .containerText h1 {
+    font-size: 28px;
+  }
+
+  .titleSpan {
+    font-size: 12px;
+  }
+
+  .paragraphAbout {
+    font-size: 13px;
+  }
+
+  /* 🔥 Overlay becomes stacked */
+  .overlayCard {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: 90%;
+    height: auto;
+
+    bottom: -15%;
+    padding: 15px;
+  }
+
+  .overlayText {
+    margin-bottom: 10px;
+  }
+
+  .overlayText h1 {
+    font-size: 16px;
+  }
+
+  .overlayText span {
+    font-size: 13px;
+  }
+
+  .overlayCard button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .containerText h1 {
+    font-size: 22px;
+  }
+
+  .paragraphAbout {
+    font-size: 12px;
+  }
+
+  .overlayCard {
+    width: 95%;
+    bottom: -18%;
+  }
+}
