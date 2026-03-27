@@ -1,16 +1,150 @@
-# React + Vite
+# SkillNest - Online Learning Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern online education platform built with React and Vite. SkillNest connects students with high-quality courses across multiple disciplines.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## React Compiler
+- **React** 19.2.0
+- **Vite** 7.2.4
+- **React Router DOM** 7.12.0
+- **React Icons** 5.5.0
+- **ESLint** 9.39.1
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+SkillNest/
+├── src/
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Categories.jsx
+│   │   ├── About.jsx
+│   │   └── Contactus.jsx
+│   ├── components/
+│   │   ├── Navbar.jsx / Navbar.css
+│   │   ├── Header.jsx / Header.css
+│   │   ├── CardCourse.jsx / CardCourse.css
+│   │   ├── Filter.jsx / Filter.css
+│   │   ├── CourseCategoryDetails.jsx
+│   │   ├── CoursePageDetails.jsx
+│   │   ├── SectionCategories.jsx
+│   │   ├── Sliding.jsx
+│   │   ├── Banner.jsx
+│   │   ├── LatesJobs.jsx
+│   │   ├── Testiominal.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Email.jsx
+│   │   ├── Effer.jsx
+│   │   ├── CategoriesPlus.jsx
+│   │   ├── ScrollToTop.jsx
+│   │   └── coursesData.js
+│   ├── assets/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── public/
+├── package.json
+├── vite.config.js
+└── eslint.config.js
+```
+
+---
+
+## Pages & Routes
+
+| Route | Page | Description |
+|-------|------|-------------|
+| `/` | Home | Landing page with hero, categories, testimonials |
+| `/categories` | Categories | Browse and filter all courses |
+| `/category/:categoryName` | CourseCategoryDetails | Courses by category |
+| `/course/:id` | CoursePageDetails | Individual course details |
+| `/about` | About | About SkillNest |
+| `/contact` | Contact | Contact form and info |
+
+---
+
+## Features
+
+- Course catalog with 100+ courses across 7 categories
+- Category filtering (All, Programming, AI, Business Analysis, Design & Creative, Data Analysis, Marketing & Sales)
+- Course details with full curriculum, lessons, and video links
+- Course cards showing instructor, duration, lectures, price, and rating
+- Responsive design with mobile hamburger menu
+- Course search in header
+- Student testimonials section
+- Contact form
+- Auto scroll to top on route change
+- Social media links in footer
+
+---
+
+## Course Categories
+
+| Category | Courses |
+|----------|---------|
+| Programming | React, JavaScript, Node.js, Full Stack, HTML/CSS, TypeScript |
+| AI | Machine Learning, Deep Learning, NLP, Reinforcement Learning |
+| Business Analysis | Project Management, Data-Driven Decisions, Stakeholder Management |
+| Data Analysis | Data Science, Analytics, Visualization |
+| Marketing & Sales | Digital Marketing, Social Media, Sales Strategy |
+| Design & Creative | UI/UX Design, Web Design |
+| Cyber Security | Security fundamentals and practices |
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/skillnest.git
+
+# Navigate to project
+cd skillnest
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+App runs at `http://localhost:5173`
+
+### Scripts
+
+```bash
+npm run dev       # Start development server
+npm run build     # Build for production
+npm run preview   # Preview production build
+npm run lint      # Run ESLint
+```
+
+---
+
+## Roadmap
+
+- [ ] Student authentication (Login / Register)
+- [ ] Student profile & dashboard
+- [ ] Admin panel
+- [ ] HR panel
+- [ ] Course enrollment
+- [ ] Progress tracking
+- [ ] Backend API integration
+- [ ] Database persistence
+
+---
+
+## License
+
+MIT
