@@ -6,11 +6,11 @@ import CourseCategoryDetails from "./components/CourseCategoryDetails";
 import ScrollToTop from "./components/ScrollToTop";
 import CoursePageDetails from "./components/CoursePageDetails";
 import About from "./pages/About.jsx";
-
 import Contactus from "./pages/Contactus.jsx"
+
 const App = () => {
   return (
-    <Router>
+    <Router basename="/SKILLNEST">
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -19,7 +19,6 @@ const App = () => {
         <Route path="/course/:id" element={<CoursePageDetails />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contactus />} />
-
       </Routes>
     </Router>
   );
